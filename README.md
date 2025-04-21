@@ -59,27 +59,11 @@ First, I changed the column `recipe_id` to `id`,  so i could conducted a left me
 
 ### Univariate Analysis
 The following graph shows the distribution of the amount of protein content among all recipes with 0 - 200 grams. The graph is skewed left as many recipes, such as desserts, have little to no protein. Making the median amount of protein being 18 grams. Understanding the distribution of protein gives valuable insight into trends.
-<iframe
- src="assets/protein_distribution (1).html" 
- width="800"
- height="600"
- frameborder="0"
- ></iframe> This graph shows the top eight most common tags
- <iframe
- src="assets/Top8Tags.html" 
- width="800"
- height="600"
- frameborder="0"
- ></iframe> ### Biivariate Analysis
- <iframe
- src="assets/Avg_Protein_per_Tag.html" 
- width="800"
- height="600"
- frameborder="0"
- ></iframe>
- <iframe
- src="assets/Protein_Steps.html" 
- width="800"
- height="600"
- frameborder="0"
- ></iframe>
+<iframe src="assets/protein_distribution (1).html"  width="800" height="600" frameborder="0"></iframe> 
+ This graph shows the top eight most common tags
+ <iframe src="assets/Top8Tags.html" width="1000" height="600" frameborder="0"
+></iframe> 
+ 
+ ### Biivariate Analysis
+<iframe src="assets/Avg_Protein_per_Tag.html" width="1000" height="600" frameborder="0" ></iframe>
+ <iframe src="assets/Protein_Steps.html" width="1000" height="600" frameborder="0" ></iframe>
