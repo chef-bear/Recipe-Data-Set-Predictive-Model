@@ -18,7 +18,7 @@ The Data Set contains recipes and ratings from food.com. It was originally scrap
 
 There are two datasets, `RAW_recipes.csv` which contain 86782 rows of recipes and 12 columns with different information such as 'nutrition' , while `RAW_interactions.csv` contains 731927 rows, as each recipe could have more than one review with five columns. However, for my analysis I will focus only on certain columns neccesary for my prediction model. 
 
-`RAW_recipes.csv`:
+`RAW_recipes.csv`: 
 
 | Column      | Description |
 |-------------|-------------|
@@ -45,5 +45,10 @@ There are two datasets, `RAW_recipes.csv` which contain 86782 rows of recipes an
 | `review`   | Review Text   |
 
 ## Data Cleaning and Exploratory Data Analysis
+
+### Cleaning
+The first step in our data cleaning process is converting `rating` of 0 to NaN. This is because when commenters review recipes and do not give a rating, the site by default, assigns the rating to be 0 when a normal should fall within the 1 - 5 range. Thus we ignore these 0 ratings. 
+
+First, I conducted a left merge of the two datasets into one dataframe and dropped any duplicate columns. Second, I found the average rating per recipe and created a new column `avg_rating`. Third, I extracted nutrition information from the `nutrition` column creating new columns in `calories` , `protein` , and `total_fat` . Finally, I dropped no longer neccessary columns such as `user_id` 
 
 
