@@ -18,9 +18,9 @@ The Data Set contains recipes and ratings from food.com. It was originally scrap
 
 There are two datasets, 'RAW_recipes.csv' which contain 86782 rows of recipes and 12 columns with different information such as 'nutrition' , while 'RAW_interactions.csv' contains 731927 rows, as each recipe could have more than one review with five columns. However, for my analysis I will focus only on certain columns neccesary for my prediction model. 
 
-| semester    | Count |
-|-------------|-------|
-| Fall 2020   | 3     |
+| Column      | Description |
+|-------------|-------------|
+| 'name'      | 3     |
 | Winter 2021 | 2     |
 | Spring 2021 | 6     |
 | Summer 2021 | 4     |
