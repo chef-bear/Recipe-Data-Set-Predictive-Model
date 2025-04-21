@@ -61,7 +61,7 @@ First, I changed the column `recipe_id` to `id`,  so i could conducted a left me
 The following graph shows the distribution of the amount of protein content among all recipes with 0 - 200 grams. The graph is skewed left as many recipes, such as desserts, have little to no protein. Making the median amount of protein being 18 grams. 
 
 <iframe
- src="assets/protein_distribution1.html" 
+ src="assets/protein_distribution(1).html" 
  width="800"
  height="600"
  frameborder="0"
