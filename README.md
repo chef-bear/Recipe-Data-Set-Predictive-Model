@@ -64,21 +64,22 @@ The following graph shows the distribution of the amount of protein content amon
  width="800"
  height="600"
  frameborder="0"
- ></iframe>
- This graph shows the top eight most common tags
+ ></iframe> This graph shows the top eight most common tags
  <iframe
  src="assets/Top8Tags.html" 
  width="800"
  height="600"
  frameborder="0"
- ></iframe>
-### Biivariate Analysis
-
+ ></iframe> ### Biivariate Analysis
  <iframe
  src="assets/Avg_Protein_per_Tag.html" 
  width="800"
  height="600"
  frameborder="0"
  ></iframe>
-
- 
+ <iframe
+ src="assets/Protein_Steps.html" 
+ width="800"
+ height="600"
+ frameborder="0"
+ ></iframe>
