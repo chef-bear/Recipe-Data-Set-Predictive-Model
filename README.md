@@ -18,6 +18,8 @@ The Data Set contains recipes and ratings from food.com. It was originally scrap
 
 There are two datasets, `RAW_recipes.csv` which contain 86782 rows of recipes and 12 columns with different information such as 'nutrition' , while `RAW_interactions.csv` contains 731927 rows, as each recipe could have more than one review with five columns. However, for my analysis I will focus only on certain columns neccesary for my prediction model. 
 
+`RAW_recipes.csv`:
+
 | Column      | Description |
 |-------------|-------------|
 | `name`      | Recipe Name     |
@@ -30,3 +32,18 @@ There are two datasets, `RAW_recipes.csv` which contain 86782 rows of recipes an
 | `n_steps` | Number of steps in recipe     |
 | `steps` | Text for recipe steps, in order     |
 | `description`   | User-provided description    |
+
+
+`RAW_interactions.csv`:
+
+| Column      | Description |
+|-------------|-------------|
+| `user_id`      | User ID     |
+| `recipe_id` | Recipe ID     |
+| `date` | Date of Interaction    |
+| `rating` | Rating Given  |
+| `review`   | Review Text   |
+
+## Data Cleaning and Exploratory Data Analysis
+
+
