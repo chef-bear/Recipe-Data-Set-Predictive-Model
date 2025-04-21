@@ -16,4 +16,12 @@ To do this I will:
 ### Introduction of Dataset
 The Data Set contains recipes and ratings from food.com. It was originally scraped and used by the authors of Generating Personalized Recipes from Historical User Preferences (UCSD). The dataset is very large so I will be using data from 2008 and beyond. 
 
-There are two datasets, 'RAW_recipes.csv' which contains the recipes and the 
+There are two datasets, 'RAW_recipes.csv' which contain 86782 rows of recipes and 12 columns with different information such as 'nutrition' , while 'RAW_interactions.csv' contains 731927 rows, as each recipe could have more than one review with five columns. However, for my analysis I will focus only on certain columns neccesary for my prediction model. 
+
+| semester    | Count |
+|-------------|-------|
+| Fall 2020   | 3     |
+| Winter 2021 | 2     |
+| Spring 2021 | 6     |
+| Summer 2021 | 4     |
+| Fall 2021   | 55    |
