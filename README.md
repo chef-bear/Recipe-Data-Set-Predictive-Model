@@ -66,9 +66,7 @@ The following graph shows the distribution of the amount of protein content amon
  height="600"
  frameborder="0"
  ></iframe>
-
  This graph shows the top eight most common tags
-
  <iframe
  src="assets/Top8Tags.html" 
  width="800"
