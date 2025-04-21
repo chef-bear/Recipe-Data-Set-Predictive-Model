@@ -60,7 +60,7 @@ First, I changed the column `recipe_id` to `id`,  so i could conducted a left me
 ### Univariate Analysis
 
 <iframe
- src="assets/protein_distribution.html1"
+ src="assets/protein_distribution1.html"
  width="800"
  height="600"
  frameborder="0"
