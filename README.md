@@ -76,4 +76,11 @@ The following graph shows the distribution of the amount of protein content amon
 
 ### Biivariate Analysis
 
+ <iframe
+ src="assets/Avg_Protein_per_Tag.html" 
+ width="800"
+ height="600"
+ frameborder="0"
+ ></iframe>
+
  
