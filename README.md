@@ -58,6 +58,7 @@ First, I changed the column `recipe_id` to `id`,  so i could conducted a left me
 |        40 | ['60-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'for-large-groups', 'desserts', 'lunch', 'snacks', 'cookies-and-brownies', 'chocolate', 'bar-cookies', 'brownies', 'number-of-servings'] | [138.4, 10.0, 50.0, 3.0, 3.0, 19.0, 6.0] |        10 | ['bittersweet chocolate', 'unsalted butter', 'eggs', 'granulated sugar', 'unsweetened cocoa powder', 'vanilla extract', 'brewed espresso', 'kosher salt', 'all-purpose flour'] |        4 |            4 |      138.4 |         3 |          10 |               0.0216763 |
 
 ### Univariate Analysis
+The following graph shows the distribution of the amount of protein content among all recipes with 0 - 200 grams. The graph is skewed left as many recipes, such as desserts, have little to no protein. Making the median amount of protein being 18 grams. 
 
 <iframe
  src="assets/protein_distribution1.html" 
