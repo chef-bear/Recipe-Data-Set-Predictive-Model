@@ -59,7 +59,6 @@ First, I changed the column `recipe_id` to `id`,  so i could conducted a left me
 
 ### Univariate Analysis
 The following graph shows the distribution of the amount of protein content among all recipes with 0 - 200 grams. The graph is skewed left as many recipes, such as desserts, have little to no protein. Making the median amount of protein being 18 grams. Understanding the distribution of protein gives valuable insight into trends.
-
 <iframe
  src="assets/protein_distribution (1).html" 
  width="800"
@@ -73,7 +72,6 @@ The following graph shows the distribution of the amount of protein content amon
  height="600"
  frameborder="0"
  ></iframe>
-
 ### Biivariate Analysis
 
  <iframe
