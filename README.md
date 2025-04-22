@@ -67,7 +67,7 @@ The following graph shows the distribution of the amount of protein content amon
 ### Bivariate Analysis
 Building off the last graph, we can see the average amount of protein per tag. We can see that certain tags such as 'Main Ingredient' and 'cuisine' have the highest, while 'easy' has the lowest. This makes sense as many main dishes feature some type of protein, while on the other hand, easy dishes usually don't incorporate as much protein due to easy usually meaning shorter cook time and proteins usually take longer to cook and prep. 
 <iframe src="assets/Avg_Protein_per_Tag.html" width="1000" height="600" frameborder="0" ></iframe>
-Lastly, we utilized a scatter plot to see the correlation between protein and number of steps.
+Lastly, we utilized a scatter plot to see the correlation between protein and number of steps. And see that there is a slight negative correlation between number of steps and protein content. Again, this makes sense as many baked goods have lots of steps but wouldn't have much protein at all.
 <iframe src="assets/Protein_Steps.html" width="1000" height="600" frameborder="0" ></iframe>
 
 ### Aggregations
@@ -87,4 +87,23 @@ I did not need to do any missing value imputation as all of my data that I would
 Using all of my previouse analysis I will attempt to predict `protein` content using `Tags`, `total fats`, and `n_steps` to make. I will do this using a ridge regression model. I will be using the MSE to measure my accuracy in this process
 
 ## Baseline Model
+The baseline mode will be a ridge regression, using standard scalar for quantitative features `total_fats` and `n_steps`. I chose ridge regression not only because it reduces the variance of the model, making it less sensitive to extreme values but also because it helps deal with possible multi collinearity in the `tags` column when we OneHotEncode it as there may be overlap in meaning.  Additionally, I OneHotEncoded Tags, because it is a categorical feature, so the model could use it to make predictions. Lastly, I used sklearn's `train_test_split` of 20% test with 80% train split. This way we can see how our training data handles unseen data, along with detecting possible overfitting of our model. 
+
+| Feature      | Variable Type |
+|-------------|-------------|
+| `tags`      | Nominal - OneHotEncoded   |
+| `total_fats` | Quantitative - Standard Scaler     |
+| `n_steps` | Quantitative - Standard Scaler    |
+
+| Test Set     | MSE |
+|-------------|-------------|
+| Train     | 1596.29   |
+| Test | 1688.77     |
+
+We used mean square error to measure our accuracy and with our ridge model we had a training mse of 1596.29 and a test mse of 1688.77. This is already a solid model, not only because we are working with such a big data set, but because we also have heavy skewing in our dataset with the max protein in a recipe to be over 4000 while our median is just 18. But lets try to make an even better model!
+
+## Final Model
+
+
+
 
