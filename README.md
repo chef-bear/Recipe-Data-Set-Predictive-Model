@@ -59,16 +59,16 @@ First, I changed the column `recipe_id` to `id`,  so i could conducted a left me
 
 ### Univariate Analysis
 The following graph shows the distribution of the amount of protein content among all recipes with 0 - 200 grams. The graph is skewed left as many recipes, such as desserts, have little to no protein. Making the median amount of protein being 18 grams. Understanding the distribution of protein gives valuable insight into trends.
-<iframe src="assets/protein_distribution (1).html"  width="800" height="600" frameborder="0"></iframe> 
+<iframe src="assets/protein_distribution (1).html"  width="1200" height="600" frameborder="0"></iframe> 
  This graph shows the top eight most common tags. Understanding the distribution of the top 8 tags allows us to have a good understanding for when we see the relationship between tags and protein content later. 
- <iframe src="assets/Top8Tags.html" width="1000" height="600" frameborder="0"
+ <iframe src="assets/Top8Tags.html" width="1200" height="600" frameborder="0"
 ></iframe> 
  
 ### Bivariate Analysis
 Building off the last graph, we can see the average amount of protein per tag. We can see that certain tags such as 'Main Ingredient' and 'cuisine' have the highest, while 'easy' has the lowest. This makes sense as many main dishes feature some type of protein, while on the other hand, easy dishes usually don't incorporate as much protein due to easy usually meaning shorter cook time and proteins usually take longer to cook and prep. 
-<iframe src="assets/Avg_Protein_per_Tag.html" width="1000" height="600" frameborder="0" ></iframe>
+<iframe src="assets/Avg_Protein_per_Tag.html" width="1200" height="600" frameborder="0" ></iframe>
 Lastly, we utilized a scatter plot to see the correlation between protein and number of steps. And see that there is a slight negative correlation between number of steps and protein content. Again, this makes sense as many baked goods have lots of steps but wouldn't have much protein at all.
-<iframe src="assets/Protein_Steps.html" width="1000" height="600" frameborder="0" ></iframe>
+<iframe src="assets/Protein_Steps.html" width="1200" height="600" frameborder="0" ></iframe>
 
 ### Aggregations
 One interesting relationship I wanted to look at is the relationship between fats and protein. As many foods with protein come with many fats. We can see below with the mean and median there is a heavy correlation between lots of fats and very high protein content. This will be very useful to think about as we build our model.
@@ -103,6 +103,17 @@ The baseline mode will be a ridge regression, using standard scalar for quantita
 We used mean square error to measure our accuracy and with our ridge model we had a training mse of 1596.29 and a test mse of 1688.77. This is already a solid model, not only because we are working with such a big data set, but because we also have heavy skewing in our dataset with the max protein in a recipe to be over 4000 while our median is just 18. But lets try to make an even better model!
 
 ## Final Model
+For my final model, two new features I incorporated were: the `log_total_fat` and `steps_per_fat`. I chose to take the log of total fat because total fat was heavily skewed right with the maximum being over 3000 grams while most recipes have only 20grams or less. So by taking the log we can reduce the skew and create a more nominal distribution which will allow us to make better predictions. For `steps_per_fat` I did `n_steps`/(`total_fat` + 1). I thought it would help the model capture a more nuanced relationship between recipe complexity and nutritional density.  For example, a burger would have very few steps but have a above average fat would have low `steps_per_fat`. On the other hand,  a salad with ten steps and a low fat content would have high `steps_per_fat`. Using this way of thinking, high-effort, low-fat recipes might be protein-rich (like lean meat stir-fries or vegan stews) while low-effort, high-fat might be fatty but low in protein (like buttery toast). 
+
+I used `GridSearchCV` to tune the regularization strength parameter alpha over the values [0.1, 1.0, 10.0, 100.0], using 5-fold cross-validation on the training set and `neg_mean_squared_error` as the scoring metric. The best-performing hyperparameter is 10, showing that the model is not overfitted but also not blind in picking up trends.
+
+My final result showed a slight lower test MSE and RMSE than the baseline, showing that the newly engineered features (`log_total_fat` and1 `steps_per_fat` ratio) subtly contributed some predictive signal, but that the baseline model was already performing well. 
+
+| Model   |   Train MSE  |   Test MSE |  
+|:---------------|--------:|---------:|
+| Base      |1596.29  |       1688.77 |   
+| Final           | 1558.91 |      1642.71|  
+
 
 
 
