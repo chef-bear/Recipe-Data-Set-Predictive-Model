@@ -84,5 +84,7 @@ One interesting relationship I wanted to look at is the relationship between fat
 I did not need to do any missing value imputation as all of my data that I would later use for my model had zero nan values
 
 ## Framing a Prediction Problem 
-Attempting to predict protein content using Tags, total fats, and number of steps to make. I will do this using a rideg regression model. 
+Using all of my previouse analysis I will attempt to predict `protein` content using `Tags`, `total fats`, and `n_steps` to make. I will do this using a ridge regression model. I will be using the MSE to measure my accuracy in this process
+
+## Baseline Model
 
