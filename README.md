@@ -70,7 +70,8 @@ Building off the last graph, we can see the average amount of protein per tag. W
 Lastly, we utilized a scatter plot to see the correlation between protein and number of steps.
 <iframe src="assets/Protein_Steps.html" width="1000" height="600" frameborder="0" ></iframe>
 
- ### Aggregations
+### Aggregations
+One interesting relationship I wanted to look at is the relationship between fats and protein. As many foods with protein come with many fats. We can see below with the mean and median there is a heavy correlation between lots of fats and very high protein content. This will be very useful to think about as we build our model.
 
 | fat_category   |    mean |   median |   count |
 |:---------------|--------:|---------:|--------:|
@@ -80,5 +81,8 @@ Lastly, we utilized a scatter plot to see the correlation between protein and nu
 | Low            | 18.5354 |       10 |  103535 |
 
 ### Imputations
+I did not need to do any missing value imputation as all of my data that I would later use for my model had zero nan values
 
+## Framing a Prediction Problem 
+Attempting to predict protein content using Tags, total fats, and number of steps to make. I will do this using a rideg regression model. 
 
