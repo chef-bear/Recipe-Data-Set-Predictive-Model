@@ -1,4 +1,4 @@
-# Protein Prediction Model🍗
+# Protein?🍗 or Protein-less?❌
 By: Kevin Zhang
 
 ## Introduction
