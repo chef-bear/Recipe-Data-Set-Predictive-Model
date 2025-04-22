@@ -49,7 +49,7 @@ There are two datasets, `RAW_recipes.csv` which contain 86782 rows of recipes an
 ### Cleaning
 The first step in our data cleaning process is converting `rating` of 0 to NaN. This is because when commenters review recipes and do not give a rating, the site by default, assigns the rating to be 0 when a normal should fall within the 1 - 5 range. Thus we ignore these 0 ratings. 
 
-First, I changed the column `recipe_id` to `id`,  so i could conducted a left merge onto the `id` column. Now one dataframe, I dropped any duplicate columns. Second, I found the average rating per recipe and created a new column `avg_rating`. Third, I extracted nutrition information from the `nutrition` column creating new columns in `calories` , `protein` , and `total_fat` . Finally, I dropped no longer neccessary columns such as `user_id` , `date`
+First, I changed the column `recipe_id` to `id`,  so i could conduct a left merge onto the `id` column. Now one dataframe, I dropped any duplicate columns. Second, I found the average rating per recipe and created a new column `avg_rating`. Third, I extracted nutrition information from the `nutrition` column creating new columns in `calories` , `protein` , and `total_fat` . Finally, I dropped no longer neccessary columns such as `user_id` , `date`, etc.
 
 **Final DataFrame:**
 
