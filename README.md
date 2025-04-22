@@ -60,13 +60,15 @@ First, I changed the column `recipe_id` to `id`,  so i could conducted a left me
 ### Univariate Analysis
 The following graph shows the distribution of the amount of protein content among all recipes with 0 - 200 grams. The graph is skewed left as many recipes, such as desserts, have little to no protein. Making the median amount of protein being 18 grams. Understanding the distribution of protein gives valuable insight into trends.
 <iframe src="assets/protein_distribution (1).html"  width="800" height="600" frameborder="0"></iframe> 
- This graph shows the top eight most common tags
+ This graph shows the top eight most common tags. Understanding the distribution of the top 8 tags allows us to have a good understanding for when we see the relationship between tags and protein content later. 
  <iframe src="assets/Top8Tags.html" width="1000" height="600" frameborder="0"
 ></iframe> 
  
- ### Bivariate Analysis
+### Bivariate Analysis
+Building off the last graph, we can see the average amount of protein per tag. We can see that certain tags such as 'Main Ingredient' and 'cuisine' have the highest, while 'easy' has the lowest. This makes sense as many main dishes feature some type of protein, while on the other hand, easy dishes usually don't incorporate as much protein due to easy usually meaning shorter cook time and proteins usually take longer to cook and prep. 
 <iframe src="assets/Avg_Protein_per_Tag.html" width="1000" height="600" frameborder="0" ></iframe>
- <iframe src="assets/Protein_Steps.html" width="1000" height="600" frameborder="0" ></iframe>
+Lastly, we utilized a scatter plot to see the correlation between protein and number of steps.
+<iframe src="assets/Protein_Steps.html" width="1000" height="600" frameborder="0" ></iframe>
 
  ### Aggregations
 
@@ -76,3 +78,7 @@ The following graph shows the distribution of the amount of protein content amon
 | High           | 54.0364 |       50 |   36956 |
 | Medium         | 35.185  |       28 |   57640 |
 | Low            | 18.5354 |       10 |  103535 |
+
+### Imputations
+
+
