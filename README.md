@@ -64,6 +64,15 @@ The following graph shows the distribution of the amount of protein content amon
  <iframe src="assets/Top8Tags.html" width="1000" height="600" frameborder="0"
 ></iframe> 
  
- ### Biivariate Analysis
+ ### Bivariate Analysis
 <iframe src="assets/Avg_Protein_per_Tag.html" width="1000" height="600" frameborder="0" ></iframe>
  <iframe src="assets/Protein_Steps.html" width="1000" height="600" frameborder="0" ></iframe>
+
+ ### Aggregations
+
+| fat_category   |    mean |   median |   count |
+|:---------------|--------:|---------:|--------:|
+| Very High      | 91.6309 |       75 |   19593 |
+| High           | 54.0364 |       50 |   36956 |
+| Medium         | 35.185  |       28 |   57640 |
+| Low            | 18.5354 |       10 |  103535 |
